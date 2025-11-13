@@ -79,7 +79,7 @@ function atualizarDados() {
                 const estado = document.getElementById('estadoAtualizar').value;
                 const telefone = document.getElementById('telefoneAtualizar').value;
 
-                fetch(`pessoas${id}`,{
+                fetch(`pessoas/${id}`,{
                     method: 'PUT',
                     headers: {
                         'Content-Type' : 'application/json'
@@ -116,7 +116,7 @@ function deletarDados() {
 
             if (pessoa) {
                 
-                fetch(`pessoas${pessoa.id}`, {
+                fetch(`pessoas/${pessoa.id}`, {
                     method: 'DELETE'
                 })
                 .then(() => alert('Pessoa deletada com sucesso!'))
@@ -125,4 +125,5 @@ function deletarDados() {
             }
         })
 }
+
 
