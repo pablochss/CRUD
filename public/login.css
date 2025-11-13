@@ -1,0 +1,164 @@
+.topbar {
+  width: 100%;
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: #00e1ff;
+  text-decoration: none;
+  margin: auto;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #1350f7;
+}
+
+
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --primary: #00e1ff;
+  --primary-hover: #1350f7;
+  --radius: 8px;
+  --font: 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ---------- Caixa de login ---------- */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.logo {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* ---------- Formulário ---------- */
+form {
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  background: #0d1117;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  margin-bottom: 15px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* ---------- Opções ---------- */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.options a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.options a:hover {
+  color: var(--text);
+}
+
+/* ---------- Botão ---------- */
+button {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+/* ---------- Rodapé ---------- */
+.signup {
+  margin-top: 15px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.signup a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}

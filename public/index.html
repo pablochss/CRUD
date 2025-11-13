@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav>
+    <div class="topbar-inner">
+      <a href="admin.html" class="admin-link">Área de administração</a>
+    </nav>
+  </div>
+</header>
+  <main class="container">
+    <div class="login-box">
+      <h1 class="logo">Login</h1>
+      <h2>Entrar na sua conta</h2>
+
+      <form>
+        <label for="usuario">E-mail</label>
+        <input type="text" id="email" placeholder="Digite seu e-mail" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+        <div class="options">
+          <a href="#">Esqueceu a senha?</a>
+        </div>
+
+        <button onclick="fazerLogin()">Entrar</button>
+      </form>
+
+      <p class="signup">Novo por aqui? <a href="cadastro.html">Crie uma conta</a></p>
+    </div>
+  </main>
+  <script src="login.js"></script>
+</body>
+</html>

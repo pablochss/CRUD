@@ -1,0 +1,132 @@
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --primary: #00e1ff;;
+  --primary-hover: #1350f7;
+  --radius: 8px;
+  --font: 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ---------- Caixa de cadastro ---------- */
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.register-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.logo {
+  text-align: center;
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* ---------- Campos ---------- */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  background: #0d1117;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  margin-bottom: 15px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+}
+
+.input-group .field {
+  flex: 1;
+}
+
+/* ---------- Botão ---------- */
+button {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 5px;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+/* ---------- Link de login ---------- */
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.login-link a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 480px) {
+  .input-group {
+    flex-direction: column;
+    gap: 0;
+  }
+}

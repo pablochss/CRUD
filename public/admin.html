@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Administração</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<table>
+    <h1>Usuários Cadastrados</h1>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>E-mail</th>
+                <th>Senha</th>
+                <th>Rua</th>
+                <th>CEP</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-corpo">
+        </tbody>
+</table>
+
+<label>CPF:</label> 
+<input type="text" id="cpfBuscar" placeholder="Digite o CPF para busca">
+<br>
+<label>Nome:</label>
+<input type="text" id="nomeBuscar">
+<br>
+<label>Sobrenome:</label>
+<input type="text" id="sobrenomeBuscar">
+<br>
+<input type="button" onclick="buscarDados()" value="Buscar">
+
+<h3>Atualizar</h3>
+<label>ID:</label>
+<input type="text" id="id"><br>
+<label>Nome:</label>
+<input type="text" id="nomeAtualizar" placeholder="Digite a troca do nome">
+<br>
+<label>Sobrenome:</label>
+<input type="text" id="sobrenomeAtualizar" placeholder="Digite a troca de sobrenome">
+<br>
+<label>CPF:</label>
+<input type="text" id="cpfAtualizar" placeholder="Digite a troca de CPF">
+<label>E-mail:</label>
+<input type="text" id="emailAtualizar" placeholder="Digite a troca de E-mail">
+<label>Senha:</label>
+<input type="password" id="senhaAtualizar" placeholder="Digite a troca de Senha">
+<label>Rua:</label>
+<input type="text" id="ruaAtualizar" placeholder="Digite a troca de Rua/Endereço">
+<label>CEP:</label>
+<input type="text" id="cepAtualizar" placeholder="Digite a troca de CEP">
+<label>Cidade:</label>
+<input type="text" id="cidadeAtualizar" placeholder="Digite a troca de Cidade">
+<label>Estado:</label>
+<input type="text" id="estadoAtualizar" placeholder="Digite a troca de Estado">
+<label>Telefone:</label>
+<input type="text" id="telefoneAtualizar" placeholder="Digite a troca de Telefone">
+<br>
+<input type="button" onclick="atualizarDados()" value="Atualizar">
+
+
+<div class="delete-container">
+<label>Deletar dados do usuário</label>
+<input type="text" id="identificadorCPF">
+<button onclick="deletarDados()">Deletar</button>
+</div>
+
+
+ <script src="admin.js"></script>
+</body>
+</html>

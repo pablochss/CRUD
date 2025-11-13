@@ -1,0 +1,17 @@
+{
+  "pessoas": [
+    {
+      "id": "d4d0",
+      "nome": "alfredo",
+      "sobrenome": "silva",
+      "cpf": "49196958880",
+      "email": "seuemail.exemplo@gmail.com",
+      "senha": "PABLAOLINDOamem1912",
+      "rua": "rua alexandre de moraes",
+      "cep": "08730330",
+      "cidade": "Nordeste",
+      "estado": "PA",
+      "telefone": "97426789"
+    }
+  ]
+}

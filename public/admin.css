@@ -1,0 +1,165 @@
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --primary: #00e1ff;
+  --primary-hover: #0026ff;
+  --radius: 6px;
+  --font: 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  padding: 40px;
+}
+
+/* ---------- Título ---------- */
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 25px;
+}
+
+/* ---------- Tabela de usuários ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+th {
+  background: #1f242c;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tr:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* ---------- Inputs e botões ---------- */
+label {
+  display: inline-block;
+  width: 120px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 250px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* ---------- Botões ---------- */
+input[type="button"],
+button {
+  background: var(--primary);
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+input[type="button"]:hover,
+button:hover {
+  background: var(--primary-hover);
+}
+
+/* ---------- Seções ---------- */
+h3 {
+  margin-top: 40px;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+
+/* ---------- Contêiner de exclusão ---------- */
+.delete-container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 15px 20px;
+  margin-top: 30px;
+  max-width: 400px;
+}
+
+.delete-container label {
+  color: #ff7b72;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.delete-container input {
+  width: calc(100% - 100px);
+  margin-right: 10px;
+}
+
+.delete-container button {
+  background: #ff7b72;
+  color: white;
+  font-weight: bold;
+}
+
+.delete-container button:hover {
+  background: #f85149;
+}
+
+/* ---------- Layout geral ---------- */
+body > label, 
+body > input, 
+body > h3, 
+body > div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
