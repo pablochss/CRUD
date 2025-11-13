@@ -11,7 +11,7 @@ function enviarDados() {
     const telefone = document.getElementById("telefone").value;
 
 
-    fetch('http://localhost:3000/pessoas', {
+    fetch('pessoas', {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json' 
@@ -19,4 +19,5 @@ function enviarDados() {
       body: JSON.stringify({nome: nome, sobrenome: sobrenome, cpf: cpf, email: email, senha: senha, rua: rua, cep: cep, cidade: cidade, estado: estado, telefone: telefone})
     })
     .then(response => response.json())
+
   }
