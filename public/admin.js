@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/pessoas')
+fetch('pessoas')
 	.then(response => response.json())
 	.then(data => {
 		const tabelaCorpo = document.getElementById('tabela-corpo');
@@ -48,7 +48,7 @@ fetch('http://localhost:3000/pessoas')
 
 function buscarDados() {
 const cpf = document.getElementById('cpfBuscar').value;
-fetch(`http://localhost:3000/pessoas`, {
+fetch(`pessoas`, {
 method: 'GET'
 })
             .then(response => response.json())
@@ -79,7 +79,7 @@ function atualizarDados() {
                 const estado = document.getElementById('estadoAtualizar').value;
                 const telefone = document.getElementById('telefoneAtualizar').value;
 
-                fetch(`http://localhost:3000/pessoas/${id}`,{
+                fetch(`pessoas${id}`,{
                     method: 'PUT',
                     headers: {
                         'Content-Type' : 'application/json'
@@ -108,7 +108,7 @@ function atualizarDados() {
 function deletarDados() {
     var cpf = document.getElementById('identificadorCPF').value
 
-    fetch('http://localhost:3000/pessoas')
+    fetch('pessoas')
         .then(response => response.json())
         .then(data => {
             
@@ -116,7 +116,7 @@ function deletarDados() {
 
             if (pessoa) {
                 
-                fetch(`http://localhost:3000/pessoas/${pessoa.id}`, {
+                fetch(`pessoas${pessoa.id}`, {
                     method: 'DELETE'
                 })
                 .then(() => alert('Pessoa deletada com sucesso!'))
@@ -125,3 +125,4 @@ function deletarDados() {
             }
         })
 }
+
