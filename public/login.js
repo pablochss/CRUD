@@ -3,7 +3,7 @@ function fazerLogin(){
     var senha = document.getElementById('senha').value
 
     //Fazer uma requisição GET - READ e busca a pessoa 
-    fetch('http://localhost:3000/pessoas').then(resposta => resposta.json())
+    fetch('pessoas').then(resposta => resposta.json())
     .then(data => {
         var pessoa = data.find(pessoas => pessoas.email === email && pessoas.senha === senha)
         if(pessoa){
@@ -12,4 +12,5 @@ function fazerLogin(){
             alert("E-mail ou Senha incorreto(a)! Tente novamente")
         }
     })
+
 }
